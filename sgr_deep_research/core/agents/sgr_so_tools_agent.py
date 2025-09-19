@@ -58,8 +58,8 @@ class SGRSOToolCallingResearchAgent(SGRToolCallingResearchAgent):
             model=config.openai.model,
             response_format=ReasoningTool,
             messages=await self._prepare_context(),
-            max_tokens=config.openai.max_tokens,
-            temperature=config.openai.temperature,
+            #max_tokens=config.openai.max_tokens,
+            #temperature=config.openai.temperature,
         ) as stream:
             async for event in stream:
                 if event.type == "chunk":

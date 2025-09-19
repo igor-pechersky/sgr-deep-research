@@ -42,8 +42,8 @@ class SGRSOToolCallingResearchAgent(SGRToolCallingResearchAgent):
         async with self.openai_client.chat.completions.stream(
             model=config.openai.model,
             messages=await self._prepare_context(),
-            max_tokens=config.openai.max_tokens,
-            temperature=config.openai.temperature,
+            #max_tokens=config.openai.max_tokens,
+            #temperature=config.openai.temperature,
             tools=await self._prepare_tools(),
             tool_choice={"type": "function", "function": {"name": ReasoningTool.tool_name}},
         ) as stream:

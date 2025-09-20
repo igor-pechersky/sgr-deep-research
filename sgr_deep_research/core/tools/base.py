@@ -178,7 +178,7 @@ class NextStepToolsBuilder:
 
 
 system_agent_tools = [
-    ClarificationTool,
+    #ClarificationTool,
     GeneratePlanTool,
     AdaptPlanTool,
     AgentCompletionTool,
